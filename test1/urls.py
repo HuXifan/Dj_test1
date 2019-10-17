@@ -16,6 +16,11 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 
+# 项目的urls文件
+# index
 urlpatterns = [
-    url(r'^admin/', include(admin.site.urls)),
+    url(r'^admin/', include(admin.site.urls)),  # 一个配置项
+    url(r'^', include('booktest.urls')),  # 包含booktest应用中的urls文件
 ]
+"""配置成功之后，去除匹配的a字符，那剩下的index字符串继续到应用的urls文件中进行正则匹配，
+匹配成功之后执行视图函数index，index视图函数返回内容hello python给浏览器来显示。"""
