@@ -20,7 +20,10 @@ from django.contrib import admin
 # index
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),  # 一个配置项
-    url(r'^', include('booktest.urls')),  # 包含booktest应用中的urls文件
+    url(r'^', include('booktest.urls')),  # 也可以是包含booktest应用中的urls文件
 ]
 """配置成功之后，去除匹配的a字符，那剩下的index字符串继续到应用的urls文件中进行正则匹配，
 匹配成功之后执行视图函数index，index视图函数返回内容hello python给浏览器来显示。"""
+"""url配置的目的是让建立url和视图函数的对应关系。
+url配置项定义在urlpatterns的列表中，每一个配置项都调用url函数。
+url函数有两个参数，第一个参数是一个正则表达式，第二个是对应的处理动作。"""

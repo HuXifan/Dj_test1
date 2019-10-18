@@ -3,7 +3,7 @@ from booktest.models import BookInfo, HeroInfo
 
 
 # 后台管理相关文件
-# Register your models here.
+# Register your models here. 注册模型
 
 # 自定义模型管理类  继承自admin.ModelAdmin 这个类
 class BookInfoAdmin(admin.ModelAdmin):

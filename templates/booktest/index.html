@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>testbook模板文件</title>
+</head>
+<body>
+<h1>这是一个模板文件index.html</h1>
+使用模板变量：<br/>
+{{ content }}
+{# 这就是注释#}
+<br/>
+使用列表  <br/>
+{{ list }}<br/>
+<ul>
+{#for 循环格式#}
+    {% for i in list %}
+        <li>{{ i }}</li>
+    {% endfor %}
+</ul>
+
+</body>
+</html>
